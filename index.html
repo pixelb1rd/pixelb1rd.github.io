@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/83d802a1a4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu" class="topnav">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+           
+            <div class="header-text">
+                <img src="images/settings.png" class="logo">
+                <h1>Hi, I'm Simona</h1>
+                <p>Mechatronics engineer</p>
+            </div>
+        </div>
+    </div>
+    <!-------------------about----------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <h1 class="sub-title">About Me</h1>
+                </div>
+                <div class="about-col-2">
+                    <p>I am a mechatronics engineer. For me, technology is not just a profession, but also a form of creation. 
+                        I have always been motivated by projects where I can follow the entire process—from design to 
+                        implementation—and see how an idea becomes a functioning system. As a mechatronics engineer, 
+                        what I particularly love about this field is how mechanics, electronics, and software work together 
+                        as a complex system. I consider myself an enthusiastic, curious, and hands-on person 
+                        who loves learning new things and building functional solutions.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div> 
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming skills:</span> <br> C#, C++, Python</li>
+                            <li><span>Knowledge of 3D printing</span></li>
+                            <li><span>Robot programming</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Zollner Kft.</span> 2022, 7 months - Intern</li>
+                            <li>Responsibilities:<br>preparing assembly instructions, providing documentation support, interpreting technical drawings and process descriptions</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Óbuda University – Bánki Donát Faculty of Mechanical Engineering and Safety Engineering | 2018 – 2022</span> <br> BSc in Mechatronics Engineering</li>
+                            <li><span>Budapest University of Technology and Economics - Faculty of Mechanical Engineering| 2022 – 2025</span><br>MSc in Mechatronics Engineering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!--------------------Portfolio---------------------->  
+ <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Portfolio</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/axe.png">
+                <div class="layer">
+                    <h3>Axe</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/pc.png">
+                <div class="layer">
+                    <h3>DIY PC</h3>
+                    <p></p>
+                </div>
+                
+            </div>
+            <div class="work">
+                <img src="images/mang.png">
+                <div class="layer">
+                    <h3>Shop sign</h3>
+                    <p></p>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+      
+ </div> 
+
+ <!---------------------Contact---------------------->
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                 <h1 class="sub-title">Contact</h1>
+                 <p><i class="fa-regular fa-envelope"></i>jakabszimonaeszter@gmail.com</p>
+                 <p><i class="fa-solid fa-phone"></i>+36705069694</p>
+                 <a href="images/JSZE_CV_en.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="E-mail" placeholder="Your Email"required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ Simona. Made with <i class="fa-regular fa-heart"></i></p>
+    </div>
+
+ </div> 
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px"
+
+    }
+
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxUaJuaQjUsfFTojdD7yhd2cmNBrtoYBxAO5dHeJic2DkhC-DbIBC7lDl_YF1Hz-CbNIw/exec'
+	const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById('msg')
+
+	form.addEventListener('submit', e => {
+		e.preventDefault()
+		fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+			.then(response => response.json())
+			.then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+			.catch(error => {
+                msg.innerHTML = "Something went wrong"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+	})
+</script>
+</body>
+</html>

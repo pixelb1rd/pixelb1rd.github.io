@@ -7,3 +7,22 @@ git add .
 git commit -m 'Your commit message here!'
 git status
 git push -u origin main
+
+#milyen repohoz van kötve
+git remote -v
+
+#egy másik repohoz áthelyezés
+git remote set-url origin https://github.com/felhasznalonev/uj-repo.git
+
+
+
+
+                     .--.
+                    / \aa\_
+             ,      \_/ ,_Y)
+            ((.------`"=(
+             \   \      |o
+             /)  /__\  /
+            / \ \_  / /|
+       jgs  \_)\__) \_)_)
+ 
